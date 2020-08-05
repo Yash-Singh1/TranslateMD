@@ -9,7 +9,9 @@ app.use(middleWares.badBody);
 app.use(middleWares.modeValid);
 app.use(middleWares.nextThingie);
 app.use(middleWares.needKey);
-const uri = process.env.url;
+const uri =
+  process.env.url ||
+  "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0";
 
 function translateHTML(html, lang, res, req, APIkey) {
   request(
@@ -51,10 +53,11 @@ function translateHTML(html, lang, res, req, APIkey) {
           " with a score of " +
           (parseInt(body.body[0].detectedLanguage.score) * 100).toString() +
           "%.</p></article>";
-        res.send(html).header({
+        res.header({
           "Content-Type": "text/html; charset=utf-8",
           "Content-Length": html.length,
         });
+        res.send(html);
       }
     }
   );
