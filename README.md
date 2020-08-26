@@ -24,7 +24,7 @@ The body must be in a JSON format
 Here is the format for the body:
 ```
 {
-	"chunk": String // The chunk is required on raw requests, it is the raw markdown
+	"text": String // The chunk is required on raw requests, it is the raw markdown
 	"url": String // The url is required on url requests
 	"lang": String // This is the language to translate to, refer to the languages section
 	"mode": String // This is the mode of the input. It can be markdown or gfm
