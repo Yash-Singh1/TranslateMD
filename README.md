@@ -54,3 +54,6 @@ npm install
 npm run start
 ```
 Now you can call the API on `localhost:5000`.
+
+## Contributing
+Contributions are welcome!
