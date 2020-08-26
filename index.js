@@ -91,6 +91,7 @@ app.post("/url", (req, res) => {
   let url = req.body.url;
   let lang = req.body.lang;
   let mode = req.body.mode;
+  let key = req.body.key;
   let context = undefined;
   if (req.body.context !== undefined && mode != "markdown") {
     context = req.body.context;
@@ -99,7 +100,7 @@ app.post("/url", (req, res) => {
     if (err) {
       return res.sendStatus(400);
     } else {
-      gfmtoHTML(body.body, lang, res, context, mode, req);
+      gfmtoHTML(body.body, lang, res, context, mode, req, key);
     }
   });
 });
