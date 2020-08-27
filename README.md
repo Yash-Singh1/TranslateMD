@@ -53,7 +53,7 @@ cd TranslateMD/
 npm install
 npm run start
 ```
-Now you can call the API on `localhost:5000`.
+Now you can call the API on `localhost:5000`. The process works exactly the same on the development enviorment.
 
 ## Contributing
 Contributions are welcome!
