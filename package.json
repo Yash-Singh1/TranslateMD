@@ -1,10 +1,11 @@
 {
   "name": "translatemdonline",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple API that takes markdown as an input and returns HTML in a different language as an output.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "author": "Yash Singh",
   "license": "ISC",

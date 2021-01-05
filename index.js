@@ -38,6 +38,9 @@ function translateHTML(html, lang, res, req, APIkey) {
       if (err) {
         console.error(err);
       } else {
+        if (body.body.error !== undefined) {
+          res.sendStatus(400);
+        }
         Object.keys(req.support).forEach((key) => {
           if (key == body.body[0].detectedLanguage.language) {
             req.detect = req.support[key].name;
