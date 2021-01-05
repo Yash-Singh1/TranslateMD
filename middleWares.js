@@ -10,7 +10,7 @@ module.exports = {
 
   methodIgnore: (req, res, next) => {
     if (req.method != "POST") {
-      return res.sendStatus(400);
+      return res.sendStatus(405);
     }
     return next();
   },

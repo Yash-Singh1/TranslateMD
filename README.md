@@ -51,7 +51,7 @@ Here is the format for the body:
 
 ### Verbs
 
-The request must be of type `POST`, any other requests will be given a status code of `400`.
+The request must be of type `POST`, any other requests will be given a status code of `405`.
 
 ### Request Validation
 
