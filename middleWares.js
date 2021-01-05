@@ -1,4 +1,4 @@
-request = require("request");
+const request = require("request");
 
 module.exports = {
   ignoreFavicon: (req, res, next) => {
